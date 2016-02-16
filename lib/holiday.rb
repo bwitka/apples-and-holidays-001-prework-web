@@ -1,5 +1,3 @@
-require 'pry'
-
 def second_supply_for_fourth_of_july(holiday_hash)
   # given that holiday_hash looks like this:
   # {
@@ -44,14 +42,8 @@ end
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
   holiday_hash[:winter].to_a.flatten
-  # winter_supplies = []
-  # winter_supplies << holiday_hash[:winter][:christmas] 
-  # winter_supplies << holiday_hash[:winter][:new_years]
-  # winter_supplies
-  # binding.pry
 end
 
-##### STUCK HERE TOO!!!! ARGH!!!
 def all_supplies_in_holidays(holiday_hash)
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter: 
@@ -63,10 +55,7 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |key, value|
     puts "#{key.to_s.capitalize}:"
     value.each do |key, value|
-      #binding.pry
       puts "  #{key.to_s.gsub(/[A-Za-z']+/,&:capitalize).gsub('_',' ')}: #{value.length > 1 ? value.join(", ") : value[0]}"
-      
-      
     end
   end
 end
